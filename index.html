@@ -59,8 +59,8 @@
     </div>
 
     <div class="numeros">
-      <div><b>8</b><span>casos de uso previstos</span></div>
-      <div><b>15</b><span>diagramas UML elaborados</span></div>
+      <div><b>7</b><span>casos de uso previstos</span></div>
+      <div><b>15+</b><span>diagramas UML elaborados</span></div>
       <div><b>11</b><span>decisões de arquitetura registradas</span></div>
       <div><b>4</b><span>perfis de acesso</span></div>
     </div>
@@ -164,8 +164,8 @@
           <span class="chip">ExcelJS (XLSX)</span>
           <span class="chip">PapaParse</span>
           <span class="chip">csv-parse</span>
-          <span class="chip">Git · monorepo</span>
-          <span class="chip">Astah · PlantUML</span>
+          <span class="chip">Git</span>
+          <span class="chip">Astah</span>
         </div>
       </div>
     </div>
@@ -226,7 +226,7 @@
       <div class="secao-num">Seção 3</div>
       <h2>Casos de uso e cronograma</h2>
       <p>
-        Os oito casos de uso previstos para o sistema, conforme o Diagrama de Caso de Uso, e
+        Os sete casos de uso previstos para o sistema, conforme o Diagrama de Caso de Uso, e
         o cronograma de desenvolvimento com as datas de conclusão e de previsão.
       </p>
     </div>
@@ -280,21 +280,6 @@
         <div class="rel">
           <code>«include»</code> Abrir Negociação · <code>«extend»</code> Registrar Dispositivo Usado
         </div>
-      </div>
-
-      <div class="cartao uc">
-        <div class="uc-topo">
-          <span class="uc-cod">UC8</span>
-          <span class="chip v">Implementado</span>
-        </div>
-        <h4>Visualizar Dashboard</h4>
-        <div class="ator">Ator: Vendedor</div>
-        <p>
-          Acompanhar os indicadores da operação apurados sobre a base real: total de
-          clientes e leads, taxa de conversão de lead para cliente ativo, faturamento
-          acumulado, ticket médio e leads sem contato recente.
-        </p>
-        <div class="rel">Todo número é calculado no servidor a cada consulta.</div>
       </div>
 
       <div class="cartao uc">
@@ -402,8 +387,8 @@
             <td class="data">29/06/2026</td>
           </tr>
           <tr>
-            <td><b>UC8</b></td>
-            <td>Visualizar Dashboard — métricas apuradas sobre a base real</td>
+            <td>—</td>
+            <td>Painel de indicadores — métricas apuradas sobre a base real</td>
             <td><span class="chip v">Concluído</span></td>
             <td class="data">06/07/2026</td>
           </tr>
@@ -501,7 +486,7 @@
       <a class="link-cartao" data-link="casoDeUso" data-acao="Abrir diagrama ↗">
         <span class="tipo">Comportamental</span>
         <b>Diagrama de Caso de Uso</b>
-        <p>Visão global do sistema: os oito casos de uso, os atores e suas relações.</p>
+        <p>Visão global do sistema: os sete casos de uso, os atores e suas relações.</p>
         <span class="estado"></span>
       </a>
     </div>
@@ -529,13 +514,16 @@
       <a class="link-cartao" data-link="seqUc7" data-acao="Abrir ↗">
         <span class="tipo">UC7</span><b>Gerenciar Dispositivo Usado</b><span class="estado"></span>
       </a>
-      <a class="link-cartao" data-link="seqUc8" data-acao="Abrir ↗">
-        <span class="tipo">UC8</span><b>Visualizar Dashboard</b><span class="estado"></span>
-      </a>
     </div>
 
     <h3 class="sub">Diagramas de estados</h3>
     <div class="grade g3">
+      <a class="link-cartao" data-link="estUc1" data-acao="Abrir ↗">
+        <span class="tipo">UC1</span>
+        <b>Estados do Cliente</b>
+        <p>Transições entre lead e cliente ativo, e inativação do cadastro.</p>
+        <span class="estado"></span>
+      </a>
       <a class="link-cartao" data-link="estUc3" data-acao="Abrir ↗">
         <span class="tipo">UC3</span>
         <b>Estados da Negociação</b>
@@ -546,12 +534,6 @@
         <span class="tipo">UC5</span>
         <b>Estados do Pedido</b>
         <p>Ciclo do pedido desde a criação pela negociação ganha até a desistência.</p>
-        <span class="estado"></span>
-      </a>
-      <a class="link-cartao" data-link="estUc6" data-acao="Abrir ↗">
-        <span class="tipo">UC6</span>
-        <b>Estados do Produto</b>
-        <p>Situação do item de catálogo ao longo da sua vida comercial.</p>
         <span class="estado"></span>
       </a>
     </div>
@@ -573,10 +555,34 @@
     </div>
 
     <h3 class="sub">Especificações de caso de uso</h3>
-    <div class="grade g2">
+    <div class="grade g4">
+      <a class="link-cartao" data-link="ucspec1" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC1 — Gerenciar Clientes</b>
+        <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="ucspec2" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC2 — Gerenciar Usuários</b>
+        <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
+        <span class="estado"></span>
+      </a>
       <a class="link-cartao" data-link="ucspec3" data-acao="Abrir documento ↗">
         <span class="tipo">Documento RUP</span>
         <b>Especificação do UC3 — Gerenciar Negociações</b>
+        <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="ucspec4" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC4 — Gerenciar Orçamento</b>
+        <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="ucspec5" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC5 — Gerenciar Pedido</b>
         <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
         <span class="estado"></span>
       </a>
@@ -584,6 +590,12 @@
         <span class="tipo">Documento RUP</span>
         <b>Especificação do UC6 — Gerenciar Produtos</b>
         <p>Especificação escrita antecipadamente ao desenvolvimento do módulo.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="ucspec7" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC7 — Gerenciar Dispositivo Usado</b>
+        <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
         <span class="estado"></span>
       </a>
     </div>
@@ -618,7 +630,7 @@
         <span class="estado"></span>
       </a>
       <a class="link-cartao" data-link="telaDashboard" data-acao="Ver captura ↗">
-        <span class="tipo">UC8</span>
+        <span class="tipo">Painel</span>
         <b>Dashboard</b>
         <p>Indicadores da operação apurados sobre a base real.</p>
         <span class="estado"></span>

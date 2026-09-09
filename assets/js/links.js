@@ -29,20 +29,24 @@ const LINKS = {
   seqUc5:        '',   // UC5 Gerenciar Pedido
   seqUc6:        '',   // UC6 Gerenciar Produtos
   seqUc7:        '',   // UC7 Gerenciar Dispositivo Usado
-  seqUc8:        '',   // UC8 Visualizar Dashboard
 
   // Diagramas de estado
+  estUc1:        '',   // Estados do Cliente
   estUc3:        '',   // Estados da Negociação
   estUc5:        '',   // Estados do Pedido
-  estUc6:        '',   // Estados do Produto
 
   // Outros diagramas elaborados
   der:           '',   // Diagrama Entidade-Relacionamento
   implantacao:   '',   // Diagrama de Implantação
 
   // Documentos de apoio (opcionais — o card some se ficar vazio? não: fica pendente)
+  ucspec1:       '',   // Especificação de Caso de Uso — UC1 (RUP)
+  ucspec2:       '',   // Especificação de Caso de Uso — UC2 (RUP)
   ucspec3:       '',   // Especificação de Caso de Uso — UC3 (RUP)
+  ucspec4:       '',   // Especificação de Caso de Uso — UC4 (RUP)
+  ucspec5:       '',   // Especificação de Caso de Uso — UC5 (RUP)
   ucspec6:       '',   // Especificação de Caso de Uso — UC6 (RUP)
+  ucspec7:       '',   // Especificação de Caso de Uso — UC7 (RUP)
 
   /* ---------- 5. TELAS E VÍDEO ---------- */
 
