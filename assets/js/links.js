@@ -36,7 +36,7 @@ const LINKS = {
   estUc5:        'https://drive.google.com/file/d/1KI8XxSC_cxwYEfz94LtIoe1T5Xi1occS/view?usp=sharing',   // Estados do Pedido
 
   // Outros diagramas elaborados
-  der:           '',   // Diagrama Entidade-Relacionamento
+  der:           'https://drive.google.com/file/d/1lSS3zy9rznmv27ldBOCyOPOHSlXIxWrt/view?usp=sharing',   // Diagrama Entidade-Relacionamento
   implantacao:   'https://drive.google.com/file/d/1vs9CaiJtJJv07QEem7Dd7QHFMNi3eRM7/view?usp=sharing',   // Diagrama de Implantação
 
   // Documentos de apoio (opcionais — o card some se ficar vazio? não: fica pendente)
@@ -50,18 +50,18 @@ const LINKS = {
 
   /* ---------- 5. TELAS E VÍDEO ---------- */
 
-  telaLogin:        '',
-  telaDashboard:    '',
-  telaClientes:     '',
-  telaClienteForm:  '',
-  telaImportacao:   '',
-  telaQuadro:       '',
-  telaConversao:    '',
-  telaUsuarios:     '',
+  telaLogin:        'https://drive.google.com/file/d/1QNN9zN-wgkWckHyfkfC_5EgfwqZgemIR/view?usp=sharing',
+  telaDashboard:    'https://drive.google.com/file/d/1QWcFQNqNWPI-m5P6fZjC9_EVAhn4NjG6/view?usp=sharing',
+  telaClientes:     'https://drive.google.com/file/d/1WLUhXs2TtY0DYO-mkGJ3M_vLVqfLZ_FD/view?usp=sharing',
+  telaClienteForm:  'https://drive.google.com/file/d/1g3-drLbmpCQf_rFsmaE9VDg3I3WPH44V/view?usp=sharing',
+  telaImportacao:   'https://drive.google.com/file/d/142xZgEYlfIa3HiaoAWEryY4n8MJuaFW9/view?usp=sharing',
+  telaQuadro:       'https://drive.google.com/file/d/13s4LjsbunE_Fml6ZHW4ZVDK99TVi-wKi/view?usp=sharing',
+  telaConversao:    'https://drive.google.com/file/d/1KBKy2k7Jkv9mzk_tNvFX2a0QXTUDcHwA/view?usp=sharing',
+  telaUsuarios:     'https://drive.google.com/file/d/10ZZMD9-Fp0YccpVx-hZ-MaGq1-Bh_eN2/view?usp=sharing',
 
   // Se for link do YouTube, o player é embutido automaticamente.
   // Qualquer outra URL (Drive, por exemplo) vira um botão "Assistir".
-  video:            '',
+  video:            'https://youtu.be/Z-mQs9YZ3_4',
 
   /* ---------- 6. RELATÓRIO DE ESTÁGIO ---------- */
 
