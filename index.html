@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MMT Urbana CRM — Portfólio do Projeto de Estágio</title>
+<meta name="description" content="Portfólio do projeto de estágio de Guilherme Marobo F. Martins — MMT Urbana CRM, sistema de gestão comercial para revenda Apple. UniFil, Engenharia de Software, 2026.">
+<meta name="author" content="Guilherme Marobo F. Martins">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===================== CABEÇALHO FIXO ===================== -->
+<header class="topo">
+  <div class="container">
+    <a class="marca" href="#inicio" style="text-decoration:none;color:inherit">
+      <b>MMT Urbana</b>
+      <span>CRM Comercial</span>
+    </a>
+    <nav class="menu">
+      <a href="#inicio"><span class="n">1</span>Início</a>
+      <a href="#sobre"><span class="n">2</span>Sobre o Projeto</a>
+      <a href="#casos-de-uso"><span class="n">3</span>Casos de Uso</a>
+      <a href="#documentacao"><span class="n">4</span>Documentação</a>
+      <a href="#telas"><span class="n">5</span>Telas e Vídeo</a>
+      <a href="#relatorio"><span class="n">6</span>Relatório</a>
+      <a href="#identificacao"><span class="n">7</span>Identificação</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===================== 1. PÁGINA INICIAL ===================== -->
+<section class="hero" id="inicio">
+  <div class="orb a"></div>
+  <div class="orb b"></div>
+  <div class="container">
+    <span class="selo">Portfólio do Projeto de Estágio · UniFil · 2026</span>
+    <h1>MMT Urbana CRM</h1>
+
+    <p class="objetivo">
+      Centralizar em um único sistema a base de clientes e leads, a equipe de vendas e o
+      ciclo comercial completo — do primeiro contato até o pedido fechado — de uma revenda
+      autorizada Apple.
+    </p>
+
+    <p class="desc">
+      Sistema web de gestão comercial desenvolvido para a MMT Urbana Serviços Digitais LTDA,
+      composto por uma API REST em NestJS com PostgreSQL e uma aplicação React. Substitui o
+      controle em planilhas por um CRM com controle de acesso por perfil, histórico de
+      negociação por cliente, métricas apuradas a partir da própria base e tratamento de
+      dados pessoais conforme a LGPD.
+    </p>
+
+    <div class="hero-acoes">
+      <a class="btn btn-primario" href="#telas">Ver o sistema funcionando</a>
+      <a class="btn btn-claro" href="#documentacao">Documentação técnica</a>
+      <a class="btn btn-claro" href="#relatorio">Relatório de estágio</a>
+    </div>
+
+    <div class="numeros">
+      <div><b>8</b><span>casos de uso previstos</span></div>
+      <div><b>15</b><span>diagramas UML elaborados</span></div>
+      <div><b>11</b><span>decisões de arquitetura registradas</span></div>
+      <div><b>4</b><span>perfis de acesso</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 2. SOBRE O PROJETO ===================== -->
+<section class="secao secao-clara" id="sobre">
+  <div class="container">
+    <div class="secao-topo">
+      <div class="secao-num">Seção 2</div>
+      <h2>Sobre o projeto</h2>
+      <p>
+        O problema de negócio que originou o sistema, as tecnologias empregadas e a
+        arquitetura da solução.
+      </p>
+    </div>
+
+    <h3 class="sub">Problema que o sistema busca resolver</h3>
+    <div class="grade g3">
+      <div class="cartao">
+        <div class="rotulo">A operação antes</div>
+        <h4>Tudo vivia em planilhas</h4>
+        <p>
+          A operação comercial era controlada em planilhas compartilhadas. Cada vendedor
+          mantinha a sua versão, e não havia uma base única de clientes da loja.
+        </p>
+      </div>
+      <div class="cartao">
+        <div class="rotulo">Consequência</div>
+        <h4>Lead sem rastreio e venda perdida</h4>
+        <p>
+          Não havia registro de quando um lead foi contatado pela última vez, nem histórico
+          de negociação por cliente. Oportunidade parada era descoberta tarde demais, ou
+          nunca.
+        </p>
+      </div>
+      <div class="cartao">
+        <div class="rotulo">Consequência</div>
+        <h4>Nenhuma visibilidade e nenhum controle</h4>
+        <p>
+          Sem faturamento por cliente, sem taxa de conversão e sem controle de quem acessa
+          o quê — a planilha inteira ficava visível para toda a equipe, incluindo CPF e
+          telefone de clientes reais.
+        </p>
+      </div>
+    </div>
+
+    <div class="cartao" style="margin-top:16px">
+      <h4>A resposta do sistema</h4>
+      <p>
+        O CRM substitui a planilha. Por isso a <b>importação de CSV da planilha legada</b> é
+        um caso de uso de primeira classe, e não um recurso acessório: ela analisa o arquivo
+        e apresenta um resumo antes de gravar qualquer coisa, importa apenas as linhas
+        válidas e relata as que falharam. Sobre essa base, o sistema entrega qualificação de
+        leads, registro de contato, condução da negociação até o pedido, métricas calculadas
+        no servidor e controle de acesso por perfil.
+      </p>
+      <div class="chips">
+        <span class="chip v">Base única de clientes</span>
+        <span class="chip v">Histórico por cliente</span>
+        <span class="chip v">Métricas reais, sem planilha</span>
+        <span class="chip v">Acesso por perfil</span>
+        <span class="chip v">LGPD: exclusão e anonimização</span>
+      </div>
+    </div>
+
+    <h3 class="sub">Tecnologias utilizadas</h3>
+    <div class="grade g3">
+      <div class="cartao">
+        <div class="rotulo">Backend</div>
+        <h4>API REST</h4>
+        <div class="chips">
+          <span class="chip b">NestJS 11</span>
+          <span class="chip b">TypeScript</span>
+          <span class="chip b">Prisma ORM 7</span>
+          <span class="chip b">PostgreSQL</span>
+          <span class="chip">JWT + Passport</span>
+          <span class="chip">bcrypt</span>
+          <span class="chip">class-validator</span>
+          <span class="chip">Swagger</span>
+        </div>
+      </div>
+      <div class="cartao">
+        <div class="rotulo">Frontend</div>
+        <h4>Aplicação web</h4>
+        <div class="chips">
+          <span class="chip p">React 18</span>
+          <span class="chip p">Vite 5</span>
+          <span class="chip p">TypeScript</span>
+          <span class="chip p">Material UI 9</span>
+          <span class="chip">MUI X DataGrid</span>
+          <span class="chip">dnd-kit</span>
+          <span class="chip">Emotion</span>
+        </div>
+      </div>
+      <div class="cartao">
+        <div class="rotulo">Dados e ferramentas</div>
+        <h4>Apoio</h4>
+        <div class="chips">
+          <span class="chip">ExcelJS (XLSX)</span>
+          <span class="chip">PapaParse</span>
+          <span class="chip">csv-parse</span>
+          <span class="chip">Git · monorepo</span>
+          <span class="chip">Astah · PlantUML</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub">Arquitetura da solução</h3>
+    <div class="fluxo">
+      <div class="caixa">
+        <b>Aplicação React</b>
+        <span>SPA em Vite + Material UI</span>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa">
+        <b>API NestJS</b>
+        <span>REST sobre HTTP/JSON, Bearer JWT</span>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa">
+        <b>Prisma ORM</b>
+        <span>Migrations versionadas</span>
+      </div>
+      <div class="seta">→</div>
+      <div class="caixa">
+        <b>PostgreSQL</b>
+        <span>Base relacional</span>
+      </div>
+    </div>
+
+    <div class="grade g2" style="margin-top:16px">
+      <div class="cartao">
+        <h4>Camadas do backend</h4>
+        <p>
+          A requisição percorre <b>Controller → Service → Prisma → PostgreSQL</b>. O
+          controller não contém regra de negócio: cuida da rota, valida a entrada por DTO e
+          delega. Toda regra — unicidade, hash de senha, cálculo de métrica, transição de
+          estado — vive no service. Três guards globais atuam em sequência antes de qualquer
+          rota: autenticação JWT, autorização por perfil e bloqueio de quem ainda não trocou
+          a senha do primeiro acesso.
+        </p>
+      </div>
+      <div class="cartao">
+        <h4>Princípios adotados</h4>
+        <p>
+          O backend é a única fonte de verdade das regras; o frontend valida apenas para
+          melhorar a experiência. Nenhum dado exibido na interface é fictício — toda métrica
+          vem de consulta real. A senha nunca sai da API, garantida por seleção explícita de
+          campos. Cada decisão de arquitetura relevante é registrada em um ADR versionado,
+          com a alternativa que foi descartada e o motivo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. CASOS DE USO E CRONOGRAMA ===================== -->
+<section class="secao" id="casos-de-uso">
+  <div class="container">
+    <div class="secao-topo">
+      <div class="secao-num">Seção 3</div>
+      <h2>Casos de uso e cronograma</h2>
+      <p>
+        Os oito casos de uso previstos para o sistema, conforme o Diagrama de Caso de Uso, e
+        o cronograma de desenvolvimento com as datas de conclusão e de previsão.
+      </p>
+    </div>
+
+    <h3 class="sub">Casos de uso previstos</h3>
+    <div class="grade g2">
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC1</span>
+          <span class="chip v">Implementado</span>
+        </div>
+        <h4>Gerenciar Clientes</h4>
+        <div class="ator">Ator: Vendedor</div>
+        <p>
+          Cadastrar, consultar, editar e excluir clientes e leads; qualificar o lead por
+          nível de intenção, registrar contato, ativar ou inativar o cadastro, buscar e
+          filtrar a base, exportar em XLSX e importar em massa a planilha legada em CSV.
+        </p>
+        <div class="rel">Importação com pré-análise: nada é gravado sem confirmação.</div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC2</span>
+          <span class="chip v">Implementado</span>
+        </div>
+        <h4>Gerenciar Usuários</h4>
+        <div class="ator">Ator: Administrador</div>
+        <p>
+          Cadastrar os membros da equipe, atribuir perfil de acesso, ativar e inativar
+          contas, redefinir senha e exportar a relação de usuários. O primeiro acesso exige
+          troca obrigatória de senha.
+        </p>
+        <div class="rel"><code>«include»</code> Atribuir Perfil de Acesso</div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC3</span>
+          <span class="chip v">Implementado</span>
+        </div>
+        <h4>Gerenciar Negociações</h4>
+        <div class="ator">Ator: Vendedor</div>
+        <p>
+          Conduzir a oportunidade comercial do interesse do cliente até o fechamento, em um
+          quadro com uma coluna por situação e movimentação por arrasto. Abrir, editar,
+          cancelar, reabrir e converter a negociação em pedido, informando a forma de
+          pagamento.
+        </p>
+        <div class="rel">
+          <code>«include»</code> Abrir Negociação · <code>«extend»</code> Registrar Dispositivo Usado
+        </div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC8</span>
+          <span class="chip v">Implementado</span>
+        </div>
+        <h4>Visualizar Dashboard</h4>
+        <div class="ator">Ator: Vendedor</div>
+        <p>
+          Acompanhar os indicadores da operação apurados sobre a base real: total de
+          clientes e leads, taxa de conversão de lead para cliente ativo, faturamento
+          acumulado, ticket médio e leads sem contato recente.
+        </p>
+        <div class="rel">Todo número é calculado no servidor a cada consulta.</div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC5</span>
+          <span class="chip a">Em desenvolvimento</span>
+        </div>
+        <h4>Gerenciar Pedido</h4>
+        <div class="ator">Ator: Vendedor</div>
+        <p>
+          Consultar e administrar os pedidos originados das negociações ganhas, acompanhar a
+          situação de cada um ao longo do ciclo e registrar desistência quando a negociação
+          correspondente é reaberta.
+        </p>
+        <div class="rel">Cada negociação origina um único pedido.</div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC6</span>
+          <span class="chip">Planejado</span>
+        </div>
+        <h4>Gerenciar Produtos</h4>
+        <div class="ator">Atores: Administrador · Vendedor (consulta)</div>
+        <p>
+          Manter o catálogo de produtos comercializados pela loja, com preço e situação, e
+          consultar a disponibilidade no momento de compor a negociação.
+        </p>
+        <div class="rel"><code>«include»</code> Consultar Estoque</div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC4</span>
+          <span class="chip">Planejado</span>
+        </div>
+        <h4>Gerenciar Orçamento</h4>
+        <div class="ator">Ator: Vendedor</div>
+        <p>
+          Gerar o orçamento a partir dos itens da negociação, com validade e condição de
+          pagamento, para envio ao cliente antes do fechamento.
+        </p>
+        <div class="rel"><code>«include»</code> Calcular Parcelamento</div>
+      </div>
+
+      <div class="cartao uc">
+        <div class="uc-topo">
+          <span class="uc-cod">UC7</span>
+          <span class="chip">Planejado</span>
+        </div>
+        <h4>Gerenciar Dispositivo Usado</h4>
+        <div class="ator">Ator: Técnico</div>
+        <p>
+          Registrar e avaliar o aparelho recebido como parte do pagamento, estimando o valor
+          de entrada a partir do estado de conservação. É o caso de uso que dá função ao
+          perfil Técnico.
+        </p>
+        <div class="rel">
+          <code>«include»</code> Estimar Valor · <code>«extend»</code> Registrar como entrada
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="sub">Cronograma de desenvolvimento</h3>
+    <div class="tabela-caixa">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:70px">UC</th>
+            <th>Etapa</th>
+            <th style="width:180px">Situação</th>
+            <th style="width:190px">Conclusão</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>—</td>
+            <td>Levantamento de requisitos, modelagem inicial e documentos RUP</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">06/04/2026</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Configuração do projeto, Prisma ORM e autenticação com JWT</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">20/05/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC2</b></td>
+            <td>Gerenciar Usuários — CRUD, perfis de acesso e redefinição de senha</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">26/05/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC1</b></td>
+            <td>Gerenciar Clientes — CRUD, qualificação de lead e registro de contato</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">15/06/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC1</b></td>
+            <td>Importação da planilha legada em CSV e exportação em XLSX</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">29/06/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC8</b></td>
+            <td>Visualizar Dashboard — métricas apuradas sobre a base real</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">06/07/2026</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Troca de senha obrigatória no primeiro acesso e controle de acesso por perfil</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">06/07/2026</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Exclusão lógica e eliminação de dados pessoais com auditoria (LGPD)</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">08/08/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC3</b></td>
+            <td>Gerenciar Negociações — máquina de estados, quadro por arrasto e conversão em pedido</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">14/08/2026</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Diagramas UML de todos os casos de uso — sequência e estado</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">24/08/2026</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Unificação do backend e do frontend em um único repositório</td>
+            <td><span class="chip v">Concluído</span></td>
+            <td class="data">04/09/2026</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td>Padronização da interface em Material UI</td>
+            <td><span class="chip a">Em andamento</span></td>
+            <td class="data">Previsão: 12/09/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC5</b></td>
+            <td>Gerenciar Pedido — tela e operações próprias do pedido</td>
+            <td><span class="chip a">Em desenvolvimento</span></td>
+            <td class="data">Previsão: 17/09/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC6</b></td>
+            <td>Gerenciar Produtos — catálogo e itens da negociação</td>
+            <td><span class="chip">Planejado</span></td>
+            <td class="data">Previsão: 22/09/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC4</b></td>
+            <td>Gerenciar Orçamento — geração a partir dos itens e cálculo de parcelamento</td>
+            <td><span class="chip">Planejado</span></td>
+            <td class="data">Previsão: 26/09/2026</td>
+          </tr>
+          <tr>
+            <td><b>UC7</b></td>
+            <td>Gerenciar Dispositivo Usado — avaliação técnica e valor de entrada</td>
+            <td><span class="chip">Planejado</span></td>
+            <td class="data">Previsão: 30/09/2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--tinta-3);margin-top:12px">
+      As datas concluídas correspondem ao histórico de versionamento do projeto. As demais
+      são previsões, ordenadas conforme a dependência técnica entre os módulos: a
+      padronização da interface antecede as telas restantes, e Orçamento e Dispositivo Usado
+      dependem dos itens de negociação entregues em Produtos.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== 4. DOCUMENTAÇÃO ===================== -->
+<section class="secao secao-clara" id="documentacao">
+  <div class="container">
+    <div class="secao-topo">
+      <div class="secao-num">Seção 4</div>
+      <h2>Documentação</h2>
+      <p>
+        Diagramas elaborados ao longo do projeto, em UML. Cada item abre o arquivo
+        correspondente em uma nova aba.
+      </p>
+    </div>
+
+    <h3 class="sub">Diagrama de classes e visão global</h3>
+    <div class="grade g2">
+      <a class="link-cartao" data-link="classes" data-acao="Abrir diagrama ↗">
+        <span class="tipo">Estrutural</span>
+        <b>Diagrama de Classes</b>
+        <p>Entidades do domínio, atributos, operações e os relacionamentos entre elas.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="casoDeUso" data-acao="Abrir diagrama ↗">
+        <span class="tipo">Comportamental</span>
+        <b>Diagrama de Caso de Uso</b>
+        <p>Visão global do sistema: os oito casos de uso, os atores e suas relações.</p>
+        <span class="estado"></span>
+      </a>
+    </div>
+
+    <h3 class="sub">Diagramas de sequência</h3>
+    <div class="grade g4">
+      <a class="link-cartao" data-link="seqUc1" data-acao="Abrir ↗">
+        <span class="tipo">UC1</span><b>Gerenciar Clientes</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc2" data-acao="Abrir ↗">
+        <span class="tipo">UC2</span><b>Gerenciar Usuários</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc3" data-acao="Abrir ↗">
+        <span class="tipo">UC3</span><b>Gerenciar Negociações</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc4" data-acao="Abrir ↗">
+        <span class="tipo">UC4</span><b>Gerenciar Orçamento</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc5" data-acao="Abrir ↗">
+        <span class="tipo">UC5</span><b>Gerenciar Pedido</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc6" data-acao="Abrir ↗">
+        <span class="tipo">UC6</span><b>Gerenciar Produtos</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc7" data-acao="Abrir ↗">
+        <span class="tipo">UC7</span><b>Gerenciar Dispositivo Usado</b><span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="seqUc8" data-acao="Abrir ↗">
+        <span class="tipo">UC8</span><b>Visualizar Dashboard</b><span class="estado"></span>
+      </a>
+    </div>
+
+    <h3 class="sub">Diagramas de estados</h3>
+    <div class="grade g3">
+      <a class="link-cartao" data-link="estUc3" data-acao="Abrir ↗">
+        <span class="tipo">UC3</span>
+        <b>Estados da Negociação</b>
+        <p>Transições de aberta a ganha, perdida ou cancelada, e a reabertura.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="estUc5" data-acao="Abrir ↗">
+        <span class="tipo">UC5</span>
+        <b>Estados do Pedido</b>
+        <p>Ciclo do pedido desde a criação pela negociação ganha até a desistência.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="estUc6" data-acao="Abrir ↗">
+        <span class="tipo">UC6</span>
+        <b>Estados do Produto</b>
+        <p>Situação do item de catálogo ao longo da sua vida comercial.</p>
+        <span class="estado"></span>
+      </a>
+    </div>
+
+    <h3 class="sub">Outros diagramas elaborados</h3>
+    <div class="grade g2">
+      <a class="link-cartao" data-link="der" data-acao="Abrir diagrama ↗">
+        <span class="tipo">Banco de dados</span>
+        <b>Diagrama Entidade-Relacionamento</b>
+        <p>Modelo físico das tabelas, chaves e cardinalidades no PostgreSQL.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="implantacao" data-acao="Abrir diagrama ↗">
+        <span class="tipo">Infraestrutura</span>
+        <b>Diagrama de Implantação</b>
+        <p>Distribuição dos componentes entre cliente, servidor de aplicação e banco.</p>
+        <span class="estado"></span>
+      </a>
+    </div>
+
+    <h3 class="sub">Especificações de caso de uso</h3>
+    <div class="grade g2">
+      <a class="link-cartao" data-link="ucspec3" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC3 — Gerenciar Negociações</b>
+        <p>Fluxo principal, subfluxos, fluxos de exceção, regras e pontos de extensão.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="ucspec6" data-acao="Abrir documento ↗">
+        <span class="tipo">Documento RUP</span>
+        <b>Especificação do UC6 — Gerenciar Produtos</b>
+        <p>Especificação escrita antecipadamente ao desenvolvimento do módulo.</p>
+        <span class="estado"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. TELAS E VÍDEO ===================== -->
+<section class="secao" id="telas">
+  <div class="container">
+    <div class="secao-topo">
+      <div class="secao-num">Seção 5</div>
+      <h2>Telas e vídeo</h2>
+      <p>
+        Evidências do funcionamento do sistema: capturas das principais funcionalidades e a
+        demonstração em vídeo.
+      </p>
+    </div>
+
+    <h3 class="sub">Demonstração em vídeo</h3>
+    <div class="video-caixa" id="video-caixa"></div>
+    <p style="font-size:13px;color:var(--tinta-3);margin-top:12px">
+      Demonstração das principais funcionalidades implementadas, com duração de até cinco
+      minutos.
+    </p>
+
+    <h3 class="sub">Capturas de tela</h3>
+    <div class="grade g4">
+      <a class="link-cartao" data-link="telaLogin" data-acao="Ver captura ↗">
+        <span class="tipo">Acesso</span>
+        <b>Login</b>
+        <p>Autenticação por e-mail e senha com emissão de token.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaDashboard" data-acao="Ver captura ↗">
+        <span class="tipo">UC8</span>
+        <b>Dashboard</b>
+        <p>Indicadores da operação apurados sobre a base real.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaClientes" data-acao="Ver captura ↗">
+        <span class="tipo">UC1</span>
+        <b>Clientes e Leads</b>
+        <p>Listagem com busca, filtros, ordenação e exportação.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaClienteForm" data-acao="Ver captura ↗">
+        <span class="tipo">UC1</span>
+        <b>Cadastro de cliente</b>
+        <p>Formulário com validação e qualificação do lead.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaImportacao" data-acao="Ver captura ↗">
+        <span class="tipo">UC1</span>
+        <b>Importação da planilha</b>
+        <p>Resumo da análise do CSV antes da gravação.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaQuadro" data-acao="Ver captura ↗">
+        <span class="tipo">UC3</span>
+        <b>Quadro de negociações</b>
+        <p>Uma coluna por situação, com movimentação por arrasto.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaConversao" data-acao="Ver captura ↗">
+        <span class="tipo">UC3 → UC5</span>
+        <b>Conversão em pedido</b>
+        <p>Fechamento da negociação com a forma de pagamento.</p>
+        <span class="estado"></span>
+      </a>
+      <a class="link-cartao" data-link="telaUsuarios" data-acao="Ver captura ↗">
+        <span class="tipo">UC2</span>
+        <b>Usuários e perfis</b>
+        <p>Equipe cadastrada com o respectivo perfil de acesso.</p>
+        <span class="estado"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. RELATÓRIO DE ESTÁGIO ===================== -->
+<section class="secao secao-clara" id="relatorio">
+  <div class="container">
+    <div class="secao-topo">
+      <div class="secao-num">Seção 6</div>
+      <h2>Relatório de estágio</h2>
+      <p>
+        Relatório atualizado, correspondente às atividades desenvolvidas até a data de
+        entrega deste portfólio.
+      </p>
+    </div>
+
+    <div class="relatorio">
+      <div style="max-width:620px">
+        <h4 style="font-size:18px">Relatório de Estágio — MMT Urbana CRM</h4>
+        <p style="color:var(--tinta-2);margin-top:10px;font-size:14px">
+          Documento em PDF contendo a descrição do sistema, a modelagem completa, as
+          especificações de caso de uso, os registros de decisão de arquitetura, os
+          diagramas UML e o documento de rastreabilidade entre documentação e código.
+        </p>
+      </div>
+      <a class="link-cartao" data-link="relatorio" data-acao="Abrir o PDF ↗"
+         style="min-width:250px">
+        <span class="tipo">PDF</span>
+        <b>Relatório de Estágio</b>
+        <span class="estado"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. IDENTIFICAÇÃO DO ALUNO ===================== -->
+<section class="secao" id="identificacao">
+  <div class="container">
+    <div class="secao-topo">
+      <div class="secao-num">Seção 7</div>
+      <h2>Identificação do aluno</h2>
+    </div>
+
+    <div class="id-grade">
+      <div>
+        <div class="rotulo">Nome completo</div>
+        <b>Guilherme Marobo F. Martins</b>
+      </div>
+      <div>
+        <div class="rotulo">Matrícula</div>
+        <b>241072064</b>
+      </div>
+      <div>
+        <div class="rotulo">Professor orientador</div>
+        <b>Marcelo Yukio Yamamoto</b>
+      </div>
+    </div>
+
+    <div class="grade g2" style="margin-top:16px">
+      <div class="cartao">
+        <div class="rotulo">Instituição</div>
+        <h4>Centro Universitário Filadélfia — UniFil</h4>
+        <p>Bacharelado em Engenharia de Software · Londrina, 2026</p>
+      </div>
+      <div class="cartao">
+        <div class="rotulo">Empresa</div>
+        <h4>MMT Urbana Serviços Digitais LTDA</h4>
+        <p>Revenda autorizada Apple · Projeto: MMT Urbana CRM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="container">
+    <div>
+      <b>MMT Urbana CRM</b> — Portfólio do Projeto de Estágio<br>
+      Guilherme Marobo F. Martins · UniFil · 2026
+    </div>
+    <div>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/links.js"></script>
+</body>
+</html>
