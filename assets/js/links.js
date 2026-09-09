@@ -18,35 +18,35 @@ const LINKS = {
   /* ---------- 4. DOCUMENTAÇÃO — diagramas UML ---------- */
 
   // Cobrados explicitamente pelo enunciado
-  classes:       '',   // Diagrama de Classes
-  casoDeUso:     '',   // Diagrama de Caso de Uso (visão global)
+  classes:       'https://drive.google.com/file/d/1MI-poFUQ0uF9rVJLm7BBUEr_XUS7Bj5r/view?usp=sharing',   // Diagrama de Classes
+  casoDeUso:     'https://drive.google.com/file/d/1tukDPGzZgOQpmqGwTyFcYi63kA3itmai/view?usp=sharing',   // Diagrama de Caso de Uso (visão global)
 
   // Diagramas de sequência (um por caso de uso)
-  seqUc1:        '',   // UC1 Gerenciar Clientes
-  seqUc2:        '',   // UC2 Gerenciar Usuários
-  seqUc3:        '',   // UC3 Gerenciar Negociações
-  seqUc4:        '',   // UC4 Gerenciar Orçamento
-  seqUc5:        '',   // UC5 Gerenciar Pedido
-  seqUc6:        '',   // UC6 Gerenciar Produtos
-  seqUc7:        '',   // UC7 Gerenciar Dispositivo Usado
+  seqUc1:        'https://drive.google.com/file/d/1djwexWL5T475Hey9enC7gE9sBngq9pKO/view?usp=sharing',   // UC1 Gerenciar Clientes
+  seqUc2:        'https://drive.google.com/file/d/1lSuFSDbjl5Ms-DFF8oWxcpAWPHszR8XH/view?usp=sharing',   // UC2 Gerenciar Usuários
+  seqUc3:        'https://drive.google.com/file/d/1lMwgGPxJAPLu2LziGSN9agA3vcmy5KBF/view?usp=sharing',   // UC3 Gerenciar Negociações
+  seqUc4:        'https://drive.google.com/file/d/1bDamfXK4h9YY4pYqTn4h3KOhzWAZ3PJC/view?usp=sharing',   // UC4 Gerenciar Orçamento
+  seqUc5:        'https://drive.google.com/file/d/1Q7efEJvglYUctjHFRfu9CPHRiJrv_pYV/view?usp=sharing',   // UC5 Gerenciar Pedido
+  seqUc6:        'https://drive.google.com/file/d/1nbyYu9b2Y42sT_Y8ugl1v546Kfd_PDDd/view?usp=sharing',   // UC6 Gerenciar Produtos
+  seqUc7:        'https://drive.google.com/file/d/1I2Jmy-MuCdofnLoTOi2avAqnUd0yv5Tf/view?usp=sharing',   // UC7 Gerenciar Dispositivo Usado
 
   // Diagramas de estado
-  estUc1:        '',   // Estados do Cliente
-  estUc3:        '',   // Estados da Negociação
-  estUc5:        '',   // Estados do Pedido
+  estUc1:        'https://drive.google.com/file/d/1P2YGija46WGyqOFinbiZAWReuyTRGKc-/view?usp=sharing',   // Estados do Cliente
+  estUc3:        'https://drive.google.com/file/d/14KNq05jL8m3VFO8tFQBkpJStsqWGBkyp/view?usp=sharing',   // Estados da Negociação
+  estUc5:        'https://drive.google.com/file/d/1KI8XxSC_cxwYEfz94LtIoe1T5Xi1occS/view?usp=sharing',   // Estados do Pedido
 
   // Outros diagramas elaborados
   der:           '',   // Diagrama Entidade-Relacionamento
-  implantacao:   '',   // Diagrama de Implantação
+  implantacao:   'https://drive.google.com/file/d/1vs9CaiJtJJv07QEem7Dd7QHFMNi3eRM7/view?usp=sharing',   // Diagrama de Implantação
 
   // Documentos de apoio (opcionais — o card some se ficar vazio? não: fica pendente)
-  ucspec1:       '',   // Especificação de Caso de Uso — UC1 (RUP)
-  ucspec2:       '',   // Especificação de Caso de Uso — UC2 (RUP)
-  ucspec3:       '',   // Especificação de Caso de Uso — UC3 (RUP)
-  ucspec4:       '',   // Especificação de Caso de Uso — UC4 (RUP)
-  ucspec5:       '',   // Especificação de Caso de Uso — UC5 (RUP)
-  ucspec6:       '',   // Especificação de Caso de Uso — UC6 (RUP)
-  ucspec7:       '',   // Especificação de Caso de Uso — UC7 (RUP)
+  ucspec1:       'https://docs.google.com/document/d/1x0dgiK-75ohsfv-RQvTYEnaIgd2OIfMLg_zmlvAMk_w/edit?usp=sharing',   // Especificação de Caso de Uso — UC1 (RUP)
+  ucspec2:       'https://docs.google.com/document/d/10K8f1-ulu-wxITync_0YoJCWWODSs_ddehOba73GCWM/edit?usp=sharing',   // Especificação de Caso de Uso — UC2 (RUP)
+  ucspec3:       'https://docs.google.com/document/d/1I0zTUynRruTXDtECey5URARGakbv5LNSZgNto6o9VlA/edit?usp=sharing',   // Especificação de Caso de Uso — UC3 (RUP)
+  ucspec4:       'https://docs.google.com/document/d/1egnas_7fLNBej7mC8gT9FBFT6l93vCXMwARCV4LUzc0/edit?usp=sharing',   // Especificação de Caso de Uso — UC4 (RUP)
+  ucspec5:       'https://docs.google.com/document/d/1CnlsgaaQ02dJEMEkQspswtRUqUugaqILplRcVNZInT0/edit?usp=sharing',   // Especificação de Caso de Uso — UC5 (RUP)
+  ucspec6:       'https://docs.google.com/document/d/1ZHG6DMeK9OZZfzVk4OJAFdCE1WO4s0B45f07FwGTotw/edit?usp=sharing',   // Especificação de Caso de Uso — UC6 (RUP)
+  ucspec7:       'https://docs.google.com/document/d/1Di-7J04S7jXx_JH913g1chnGLhE814J2e0oNh55CfMo/edit?usp=sharing',   // Especificação de Caso de Uso — UC7 (RUP)
 
   /* ---------- 5. TELAS E VÍDEO ---------- */
 
@@ -65,7 +65,7 @@ const LINKS = {
 
   /* ---------- 6. RELATÓRIO DE ESTÁGIO ---------- */
 
-  relatorio:        '',   // PDF do Relatório de Estágio atualizado
+  relatorio:        'https://docs.google.com/document/d/17P0_XLBIoxGSrszGeuH7X9pWQwMW8NPhCn9ue2KUEds/edit?usp=sharing',   // PDF do Relatório de Estágio atualizado
 }
 
 /* ==========================================================================
